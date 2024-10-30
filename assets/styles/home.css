@@ -78,7 +78,7 @@
     display: flex;
     position: fixed;
     top: 836px;
-    left: 1530px;
+    right: 45px;
     z-index: 1000;
     justify-content: center;
     align-items: center;
