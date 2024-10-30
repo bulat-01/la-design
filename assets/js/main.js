@@ -11,7 +11,7 @@ menuBtn.addEventListener('click', (event) => {
 });
 
 menu.addEventListener('click', (event) => {
-    let target = event.target;
+    const target = event.target;
 
     if (!target.classList.contains('menu-navigation__item')) return; 
 
