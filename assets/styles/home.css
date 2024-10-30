@@ -64,7 +64,12 @@
     display: flex;
     justify-content: center;
     margin-top: 172px;
+}
+
+.arrow-bottom__img {
     cursor: pointer;
+    width: 20px;
+    height: 41px;
 }
 
 .main {
