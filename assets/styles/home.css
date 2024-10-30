@@ -36,6 +36,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 15px;
     margin-top: 165px;
 }
 
@@ -55,6 +56,20 @@
     letter-spacing: 0.12em;
     text-align: center;
     line-height:135%;
+}
+
+.arrow-bottom {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    margin-top: 172px;
+}
+
+.arrow-bottom__img {
+    cursor: pointer;
+    width: 20px;
+    height: 41px;
 }
 
 .main {
@@ -310,6 +325,10 @@
         margin-top: 81px;
     }
 
+    .arrow-bottom {
+        margin-top: 66px;
+    }
+
     .benefits__info-left {
         width: 450px;
     }
@@ -417,6 +436,9 @@
 }
 
 @media (max-width:586px) {      
+    .arrow-bottom {
+        display: none;
+    }
 
     .main {
         padding: 0 12px;
