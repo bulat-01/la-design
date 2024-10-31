@@ -97,10 +97,12 @@
 }
 
 .menu-button {
+    position: relative;
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 10px;
+    height: 30px;
+    justify-content: space-between;
     margin-left: 80px;
 }
 
@@ -110,9 +112,15 @@
     transition: all 0.3s;
 }
 
+.menu-button_active {
+    gap: 0;
+    flex-direction: row;
+}
+
 .menu-button_active > :nth-child(1) {
-    top: 50%;
-    transform: rotate(-45deg) translate(0px, -100%);
+    position: absolute;
+    bottom: 14px;
+    transform: rotate(-45deg);
 }
 
 .menu-button_active > :nth-child(2) {
@@ -120,8 +128,9 @@
 }
 
 .menu-button_active > :nth-child(3) {
-    bottom: 50%;
-    transform: rotate(45deg) translate(0px, 50%);
+    position: absolute;
+    bottom: 14px;
+    transform: rotate(45deg);
 }
 
 .h2 {
@@ -268,12 +277,35 @@
         padding: 0 15px;
     }
 
-    .logo img {
+    .header__right {
+        align-items: center;
+    }
+    
+    .logo img, .logo-for-menu img {
         width: 30px;
         height: 30px;
     }
 
-    .tel__image img {
+    .menu-button {
+        height: 20px;
+        justify-content: space;
+    }
+
+    .menu-button_active {
+        width: 26px;
+        height: 26px;
+    }
+    .menu-button_active > :nth-child(1) {
+        width: 100%;
+        bottom: 11px;
+    }
+
+    .menu-button_active > :nth-child(3) {
+        width: 100%;
+        bottom: 11px;
+    }
+
+    .tel__image img, .tel__image-for-menu img {
         width: 21px;
         height: 21px;
     }
