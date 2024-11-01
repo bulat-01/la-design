@@ -32,7 +32,10 @@ menu.addEventListener('click', (event) => {
     header.classList.remove('header_active');
     menu.classList.remove('menu_active');
     menuBtn.classList.remove('menu-button_active');
-    menuBtnLines.forEach((line) => line.classList.remove('menu-button__line_active'));
+    menuBtnLines.forEach((line) => {
+        line.style.transition = 'none'
+        line.classList.remove('menu-button__line_active')}
+    );
     logoIcon.classList.remove('logo_off');
     logoIconForMenu.classList.remove('logo-for-menu_active');
     telNumber.classList.remove('tel__image_off');

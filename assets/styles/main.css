@@ -260,6 +260,10 @@
     .menu-button {
         margin-left: 29px;
     }
+
+    .menu-button_active {
+        margin-left: 39px;
+    }
 }
 
 @media (max-width:586px) {
