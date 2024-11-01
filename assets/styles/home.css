@@ -8,6 +8,22 @@
   height: 800px;
 }
 
+.header {
+    border-bottom: 0.5px solid #878787;
+}
+
+.header_active {
+    border-bottom: 0;
+}
+
+.tel__number {
+    color: #FFFFFF;
+}
+
+.menu-button__line {
+    border: 2px solid #fff;
+}
+
 .background__image {
     position: absolute;
     top: 0;
