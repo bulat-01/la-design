@@ -26,7 +26,7 @@ menuBtn.addEventListener('click', (event) => {
 menu.addEventListener('click', (event) => {
     const target = event.target;
 
-    if (!target.classList.contains('menu-navigation__item')) return; 
+    if (!(target.classList.contains('menu-navigation__item'))) return; 
 
     body.classList.remove('body_lock');
     header.classList.remove('header_active');
