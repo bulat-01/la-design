@@ -180,15 +180,15 @@
 
 .portfolio__tabs {
     max-width: 662px;
+    overflow: auto;
     margin: 50px auto 40px auto;
 }
 
 .tabs__items {
+    position: relative;
     max-width: 662px;
-    overflow: auto;
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    gap: 50px;
     text-wrap: nowrap;
     /* Скрываем scrollbar для IE, Edge и Firefox */
     -ms-overflow-style: none;  /* IE и Edge */
@@ -209,6 +209,7 @@
     text-transform: uppercase;
     text-decoration: unset;
     text-wrap: nowrap;
+    cursor: pointer;
 }
 
 .tabs__tab span {
@@ -218,11 +219,11 @@
 
 .tabs__line {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+    width: 662px;
     margin-top: 10px;
     border-bottom: 1px solid #D5D5D5;
 }
+
 
 .tabs__black-line {
     position: absolute;
@@ -230,17 +231,48 @@
     left: 0;
     width: 94px;
     border-bottom: 2px solid #000000;
+    transition: all 0.3s ease;
 }
 
 .portfolio__list {
+    margin: 0 auto 0 auto;
+}
+
+.list__all-works, .list__apartments, .list__house, .list__commercial-premises {
+    display: none;
+}
+
+
+.list__all-works.active {
     display: grid;
-    max-height: 1198px;
-    max-width: 1198px;
     grid-template-rows: repeat(4, calc((100% - 90px)/4));
     grid-template-columns: repeat(4, calc((100% - 90px)/4));
     text-align: center;
     gap: 30px;
-    margin: 0 auto 0 auto;
+}
+
+.list__apartments.active {
+    display: grid;
+    grid-template-rows: repeat(3, calc((100% - 60px)/3));
+    grid-template-columns: repeat(4, calc((100% - 90px)/4));
+    text-align: center;
+    gap: 30px;
+}
+
+.list__house.active {
+    display: grid;
+    grid-template-rows: repeat(3, calc((100% - 60px)/3));
+    grid-template-columns: repeat(4, calc((100% - 90px)/4));
+    text-align: center;
+    gap: 30px;
+}
+
+.list__commercial-premises.active {
+    display: grid;
+    grid-template-rows: repeat(3, calc((100% - 60px)/3));
+    grid-template-columns: repeat(4, calc((100% - 90px)/4));
+    text-align: center;
+    gap: 30px;
 }
 
 .list__item {
@@ -369,12 +401,6 @@
         margin-top: 150px;
     }
 
-    .portfolio__list {
-        max-width: 930px;
-        max-height: 930px;
-        margin-top: 50px;
-    }
-
     .portfolio__tabs {
         margin: 50px auto 40px auto;
     }
@@ -431,10 +457,25 @@
         margin: 30px auto;
     }
 
-    .portfolio__list {
-        max-height: 2786px;
+    .list__all-works.active {
         grid-template-rows: repeat(8, calc((100% - 210px)/8));
         grid-template-columns: repeat(2, calc((100% - 30px)/2));
+    }
+
+    .list__apartments.active {
+        grid-template-rows: repeat(4, calc((100% - 90px)/4));
+        grid-template-columns: repeat(3, calc((100% - 60px)/3));
+    }
+
+    .list__house.active {
+        grid-template-rows: repeat(4, calc((100% - 90px)/4));
+        grid-template-columns: repeat(3, calc((100% - 60px)/3));
+    }
+
+    .list__commercial-premises.active {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
     }
 
     .list__item:nth-child(1){ order: 1; }
@@ -476,7 +517,7 @@
         padding: 0 12px;
     }
     
-    .portfolio__list {
+    .list__all-works.active, .list__apartments.active, .list__house.active {
         display: flex;
         flex-direction: column;
         row-gap: 10px;
@@ -502,6 +543,14 @@
 @media (max-width:476px) {
     .lozung__title {
         font-size: 80px;
+     }
+
+     .tabs__items {
+        gap: 30px;
+     }
+
+     .tabs__line {
+        width: 602px;
      }
 }
 
