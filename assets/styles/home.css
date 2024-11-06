@@ -136,14 +136,13 @@
 .benefits__item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     border-top: 1px solid #D5D5D5;
     padding: 23px 0;
     gap: 20px;
 }
 
 .benefits__item-info {
-
+    
 }
 
 .benefits__item:last-child {
@@ -165,14 +164,14 @@
     font-weight: 300;
     line-height: 24px;
     color: #777777;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: all 0.3s;
+    transition: all 0.6s;
 }
 
 .benefits__item-description_active {
    margin-top: 12px;
-   height: auto;
+   max-height: unset;
 }
 
 .benefits__arrow {
