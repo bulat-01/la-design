@@ -4,7 +4,8 @@ const targetBlock = document.querySelector('.portfolio');
 const buttonToTop = document.querySelector('.button-to-top');
 const benefitsArrows = document.querySelectorAll('.benefits__arrow img');
 const benefitsItemDescription = document.querySelectorAll('.benefits__item-description');
-console.log(benefitsArrows);
+let arrowId;
+
 arrowDown.addEventListener('click', (event) => {
     targetBlock.scrollIntoView({
         behavior: "smooth",
@@ -22,7 +23,7 @@ buttonToTop.addEventListener('click', (event) => {
 benefitsArrows.forEach((arrow) => {
     arrow.addEventListener('click', (event) => {
         event.target.classList.toggle('benefits__arrow_active');
-        const arrowId = event.target.dataset.arrow;
+        arrowId = event.target.dataset.arrow;
         document.getElementById(arrowId).classList.toggle("benefits__item-description_active");
     })
 })

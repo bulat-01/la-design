@@ -142,7 +142,7 @@
 }
 
 .benefits__item-info {
-    
+   
 }
 
 .benefits__item:last-child {
@@ -166,12 +166,12 @@
     color: #777777;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.6s;
+    transition: all 0.2s ease-out;
 }
 
 .benefits__item-description_active {
    margin-top: 12px;
-   max-height: unset;
+   max-height: fit-content;
 }
 
 .benefits__arrow {
