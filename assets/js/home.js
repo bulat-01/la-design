@@ -5,7 +5,12 @@ const targetBlock = document.querySelector('.portfolio');
 const tabsButtons = document.querySelectorAll('.tabs__tab');
 const benefitsArrows = document.querySelectorAll('.benefits__arrow img');
 const benefitsItemDescription = document.querySelectorAll('.benefits__item-description');
-let arrowId;
+const AllWorks = document.querySelector('.list__all-works');
+const AllWorksItems = Array.from(AllWorks.children);
+let currentWorksItems = 10;
+let hiddenWorksItems;
+let countRows = 4;
+const btnShowMore = document.querySelector('.portfolio__button');
 
 arrowDown.addEventListener('click', (event) => {
     targetBlock.scrollIntoView({
@@ -24,10 +29,11 @@ buttonToTop.addEventListener('click', (event) => {
 benefitsArrows.forEach((arrow) => {
     arrow.addEventListener('click', (event) => {
         event.target.classList.toggle('benefits__arrow_active');
-        arrowId = event.target.dataset.arrow;
+        const arrowId = event.target.dataset.arrow;
         document.getElementById(arrowId).classList.toggle("benefits__item-description_active");
     })
 })
+
 document.addEventListener('DOMContentLoaded', () => {
   tabsButtons.forEach((tabButton) => {
     const tabContent = document.getElementById(tabButton.dataset.tab);
@@ -44,6 +50,12 @@ tabsButtons.forEach((tabButton) => {
     }
     
     const tabContentActive = document.getElementById(tabButton.dataset.tab);
+
+    if(tabContentActive.classList.contains('list__all-works')) {
+      btnShowMore.style.display = 'flex';
+    } else {
+      btnShowMore.style.display = 'none';
+    }
     
     tabContentActive.classList.add('active');
 
@@ -54,3 +66,31 @@ tabsButtons.forEach((tabButton) => {
   })
 })
 
+btnShowMore.addEventListener('click', (event) => {
+  if(btnShowMore.firstElementChild.textContent == 'Показать еще работы') {
+    hiddenWorksItems = AllWorksItems.slice(currentWorksItems, currentWorksItems + 7);
+    currentWorksItems += 7;
+    countRows += 3;
+    hiddenWorksItems.forEach((item) => {
+      item.style.display = 'block';
+    })
+  
+    AllWorks.style.gridTemplateRows = `repeat(${countRows}, calc((100% - ${(countRows-1) * 30}px)/${countRows}))`;
+    
+    
+    if(currentWorksItems == AllWorksItems.length) {
+      btnShowMore.firstElementChild.textContent = 'Свернуть';
+    }
+  } else {
+      currentWorksItems = 10;
+      countRows = 4;
+
+      AllWorksItems.slice(10).forEach((item) => {
+        item.style.display = 'none';
+      })
+    
+      AllWorks.style.gridTemplateRows = `repeat(${countRows}, calc((100% - ${(countRows-1) * 30}px)/${countRows}))`;
+
+      btnShowMore.firstElementChild.textContent = 'Показать еще работы';
+  }
+})
