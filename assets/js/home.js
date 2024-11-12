@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 tabsButtons.forEach((tabButton) => {
   tabButton.addEventListener('click', (event) => {
     const tabButtonActive = document.querySelector('.active');
-    console.log(tabButtonActive);
+    
     if (tabButtonActive) {
       tabButtonActive.classList.remove('active');
     }
@@ -39,13 +39,8 @@ tabsButtons.forEach((tabButton) => {
 
     const line = document.querySelector('.tabs__black-line');
     
-    if(event.target.tagName == 'DIV') {
-      line.style.width = event.target.offsetWidth - event.target.children[0].offsetWidth - 5  + 'px';
-      line.style.left = event.target.offsetLeft   + 'px'; 
-    } else if(event.target.tagName == 'SPAN') {
-      line.style.width = event.target.parentElement.offsetWidth -  event.target.offsetWidth - 5 + 'px';
-      line.style.left = event.target.parentElement.offsetLeft  + 'px'; 
-    }
+    line.style.width = event.currentTarget.offsetWidth - event.currentTarget.children[0].offsetWidth - 5  + 'px';
+    line.style.left = event.currentTarget.offsetLeft + 'px'; 
   })
 })
 
