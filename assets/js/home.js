@@ -51,7 +51,7 @@ tabsButtons.forEach((tabButton) => {
     
     const tabContentActive = document.getElementById(tabButton.dataset.tab);
 
-    if(tabContentActive.classList.contains('list__all-works')) {
+    if (tabContentActive.classList.contains('list__all-works')) {
       btnShowMore.style.display = 'flex';
     } else {
       btnShowMore.style.display = 'none';
@@ -67,15 +67,16 @@ tabsButtons.forEach((tabButton) => {
 })
 
 btnShowMore.addEventListener('click', (event) => {
-  if(btnShowMore.firstElementChild.textContent == 'Показать еще работы') {
+  if (btnShowMore.firstElementChild.textContent == 'Показать еще работы') {
     hiddenWorksItems = AllWorksItems.slice(currentWorksItems, currentWorksItems + 7);
     currentWorksItems += 7;
     countRows += 3;
+    
     hiddenWorksItems.forEach((item) => {
       item.style.display = 'block';
     })
      
-    if(currentWorksItems == AllWorksItems.length) {
+    if (currentWorksItems == AllWorksItems.length) {
       btnShowMore.firstElementChild.textContent = 'Свернуть';
     }
     
