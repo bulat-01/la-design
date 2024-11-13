@@ -74,13 +74,11 @@ btnShowMore.addEventListener('click', (event) => {
     hiddenWorksItems.forEach((item) => {
       item.style.display = 'block';
     })
-  
-    AllWorks.style.gridTemplateRows = `repeat(${countRows}, calc((100% - ${(countRows-1) * 30}px)/${countRows}))`;
-    
-    
+     
     if(currentWorksItems == AllWorksItems.length) {
       btnShowMore.firstElementChild.textContent = 'Свернуть';
     }
+    
   } else {
       currentWorksItems = 10;
       countRows = 4;
@@ -89,8 +87,6 @@ btnShowMore.addEventListener('click', (event) => {
         item.style.display = 'none';
       })
     
-      AllWorks.style.gridTemplateRows = `repeat(${countRows}, calc((100% - ${(countRows-1) * 30}px)/${countRows}))`;
-
       btnShowMore.firstElementChild.textContent = 'Показать еще работы';
   }
 })
