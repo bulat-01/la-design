@@ -271,7 +271,20 @@
 
 .list__all-works.active {
     display: grid;
-    grid-template-rows: repeat(4, calc((100% - 90px)/4));
+    grid-template-columns: repeat(4, calc((100% - 90px)/4));
+    text-align: center;
+    gap: 30px;
+}
+
+.list__all-works.active .list__item:nth-child(n+11) {
+    display: none;
+} 
+
+.list__more-images {
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, calc((100% - 60px)/3));
     grid-template-columns: repeat(4, calc((100% - 90px)/4));
     text-align: center;
     gap: 30px;
@@ -346,7 +359,7 @@
 .overlay:hover {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.6);
-    
+
 }
 
 .item-1x2 {
@@ -488,7 +501,6 @@
     }
 
     .list__all-works.active {
-        grid-template-rows: repeat(8, calc((100% - 210px)/8));
         grid-template-columns: repeat(2, calc((100% - 30px)/2));
     }
 
