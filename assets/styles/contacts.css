@@ -125,7 +125,6 @@
     color: #777777;
 
 }
-
 .form__attachfile {
     margin-top: 44px;
     display: flex;
@@ -133,6 +132,7 @@
     gap: 10px;
     align-items: center;
 }
+
 
 .form__attachfile-text {
     font-size: 16px;

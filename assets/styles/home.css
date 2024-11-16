@@ -141,6 +141,10 @@
     gap: 20px;
 }
 
+.benefits__item-info {
+   
+}
+
 .benefits__item:last-child {
     border-bottom: 1px solid #D5D5D5;
 }
