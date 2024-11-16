@@ -5,7 +5,6 @@ const targetBlock = document.querySelector('.portfolio');
 const tabsButtons = document.querySelectorAll('.tabs__tab');
 const benefitsArrows = document.querySelectorAll('.benefits__arrow img');
 const benefitsItemDescription = document.querySelectorAll('.benefits__item-description');
-let arrowId;
 
 arrowDown.addEventListener('click', (event) => {
     targetBlock.scrollIntoView({
@@ -23,8 +22,8 @@ buttonToTop.addEventListener('click', (event) => {
 
 benefitsArrows.forEach((arrow) => {
     arrow.addEventListener('click', (event) => {
+        const arrowId = event.target.dataset.arrow;
         event.target.classList.toggle('benefits__arrow_active');
-        arrowId = event.target.dataset.arrow;
         document.getElementById(arrowId).classList.toggle("benefits__item-description_active");
     })
 })
@@ -38,17 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
 tabsButtons.forEach((tabButton) => {
   tabButton.addEventListener('click', (event) => {
     const tabButtonActive = document.querySelector('.active');
-    
+    const tabContentActive = document.getElementById(tabButton.dataset.tab);
+    const line = document.querySelector('.tabs__black-line');
+
     if (tabButtonActive) {
       tabButtonActive.classList.remove('active');
     }
-    
-    const tabContentActive = document.getElementById(tabButton.dataset.tab);
-    
+        
     tabContentActive.classList.add('active');
 
-    const line = document.querySelector('.tabs__black-line');
-    
     line.style.width = event.currentTarget.offsetWidth - event.currentTarget.children[0].offsetWidth - 5  + 'px';
     line.style.left = event.currentTarget.offsetLeft + 'px'; 
   })
