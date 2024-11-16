@@ -3,10 +3,6 @@ const menu = document.querySelector('.menu');
 const header = document.querySelector('.header');
 const menuBtn = document.querySelector('.menu-button');
 const menuBtnLines = document.querySelectorAll('.menu-button__line');
-const logoIcon = document.querySelector('.logo');
-const logoIconForMenu = document.querySelector('.logo-for-menu');
-const telNumberIcon = document.querySelector('.tel__image');
-const telNumberIconForMenu = document.querySelector('.tel__image-for-menu');
 const telNumber = document.querySelector('.tel__number');
 const applicationBtn = document.querySelector('.application-button');
 const popupForma = document.querySelector('.popup-forma');
@@ -16,20 +12,18 @@ const tel = document.getElementById('tel');
 const inputMask = new Inputmask('+7 (999) 999-99-99');
 inputMask.mask(tel);
 const btnClosePopupForma = document.querySelector('.popup-forma__button-close');
+const btnPrivacyPolicy = document.querySelector('.popup-form__consent-text span');
+const popupPrivacyPolicy = document.querySelector('.popup-privacy-policy');
+const btnClosePrivacyPolicy = document.querySelector('.popup-privacy-policy__button-close');
 const popupThanks = document.querySelector('.popup-thanks');
 const btnClosePopupThanks = document.querySelector('.popup-thanks__button-close');
+
 
 menuBtn.addEventListener('click', (event) => {
     body.classList.toggle('body_lock');
     header.classList.toggle('header_active');
     menu.classList.toggle('menu_active');
     menuBtn.classList.toggle('menu-button_active');
-    menuBtnLines.forEach((line) => line.classList.toggle('menu-button__line_active'));
-    logoIcon.classList.toggle('logo_off');
-    logoIconForMenu.classList.toggle('logo-for-menu_active');
-    telNumberIcon.classList.toggle('tel__image_off');
-    telNumberIconForMenu.classList.toggle('tel__image-for-menu_active');
-    telNumber.classList.toggle('tel__number_active')
 });
 
 menu.addEventListener('click', (event) => {
@@ -42,14 +36,8 @@ menu.addEventListener('click', (event) => {
     menu.classList.remove('menu_active');
     menuBtn.classList.remove('menu-button_active');
     menuBtnLines.forEach((line) => {
-        line.style.transition = 'none'
-        line.classList.remove('menu-button__line_active')}
-    );
-    logoIcon.classList.remove('logo_off');
-    logoIconForMenu.classList.remove('logo-for-menu_active');
-    telNumber.classList.remove('tel__image_off');
-    telNumberIconForMenu.classList.remove('tel__image-for-menu_active');
-    telNumber.classList.remove('tel__number_active')
+        line.style.transition = 'none';
+    });
 });
 
 applicationBtn.addEventListener('click', (event) => {
@@ -60,6 +48,14 @@ applicationBtn.addEventListener('click', (event) => {
 btnClosePopupForma.addEventListener('click', (event) => {
     popupForma.classList.remove('active');
     body.classList.remove('body_lock');
+})
+
+btnPrivacyPolicy.addEventListener('click', (event) => {
+    popupPrivacyPolicy.classList.add('active');
+})
+
+btnClosePrivacyPolicy.addEventListener('click', (event) => {
+    popupPrivacyPolicy.classList.remove('active');
 })
 
 form.addEventListener('submit', (event) => {
