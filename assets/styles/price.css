@@ -15,6 +15,14 @@
     display: none;
 }
 
+.navigation__item:hover {
+    border-bottom: 1px solid #393246;
+}
+
+.tel:hover .tel__image svg {
+    fill: #393246;
+}
+
 .tel__image_off {
     display: none;
 }
@@ -35,14 +43,26 @@
     display: block;
 }
 
+.tel:hover .tel__image-for-menu_active svg {
+    fill: white;
+}
+
 .tel__number {
     color: #777777;
-    transition: all 0.5s;
+}
+
+.tel:hover .tel__number {
+    color: #393246;
 }
 
 .tel__number_active {
     color: #FFFFFF;
 }
+
+.tel:hover .tel__number_active {
+    color: #FFFFFF;
+}
+
 
 .menu-button__line {
     border: 2px solid #393246;
@@ -429,6 +449,13 @@
 
     .application-button, footer {
         margin-top: 70px;
+    }
+}
+
+@media (max-width:450px) {
+    .tel__image-for-menu img {
+        width: 21px;
+        height: 21px;
     }
 }
 

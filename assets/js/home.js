@@ -3,7 +3,7 @@ const arrowDown = document.querySelector('.arrow-bottom__img');
 const buttonToTop = document.querySelector('.button-to-top');
 const targetBlock = document.querySelector('.portfolio');
 const tabsButtons = document.querySelectorAll('.tabs__tab');
-const benefitsArrows = document.querySelectorAll('.benefits__arrow img');
+const benefitsArrows = document.querySelectorAll('.benefits__arrow');
 const benefitsItemDescription = document.querySelectorAll('.benefits__item-description');
 const AllWorks = document.querySelector('.list__all-works');
 const AllWorksItems = Array.from(AllWorks.children);
@@ -28,8 +28,8 @@ buttonToTop.addEventListener('click', (event) => {
 
 benefitsArrows.forEach((arrow) => {
     arrow.addEventListener('click', (event) => {
-        event.target.classList.toggle('benefits__arrow_active');
-        const arrowId = event.target.dataset.arrow;
+        event.currentTarget.classList.toggle('benefits__arrow_active');
+        const arrowId = event.currentTarget.dataset.arrow;
         document.getElementById(arrowId).classList.toggle("benefits__item-description_active");
     })
 })

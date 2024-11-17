@@ -38,6 +38,14 @@
     border-bottom: 0;
 }
 
+.navigation__item:hover {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.tel:hover .tel__image svg {
+    fill: white;
+}
+
 .tel__number {
     color: #FFFFFF;
 }
