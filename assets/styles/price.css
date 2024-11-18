@@ -43,7 +43,7 @@
     display: block;
 }
 
-.tel:hover .tel__image-for-menu_active svg {
+.tel:hover .tel__image-for-menu_white svg {
     fill: white;
 }
 
@@ -59,7 +59,7 @@
     color: #FFFFFF;
 }
 
-.tel:hover .tel__number_active {
+.tel:hover .tel__number_white {
     color: #FFFFFF;
 }
 
