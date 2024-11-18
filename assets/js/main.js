@@ -10,7 +10,6 @@ const form = document.getElementById('form');
 const userName = document.getElementById('username');
 const tel = document.getElementById('tel');
 const inputMask = new Inputmask('+7 (999) 999-99-99');
-inputMask.mask(tel);
 const btnClosePopupForma = document.querySelector('.popup-forma__button-close');
 const btnPrivacyPolicy = document.querySelector('.popup-form__consent-text span');
 const popupPrivacyPolicy = document.querySelector('.popup-privacy-policy');
@@ -18,6 +17,7 @@ const btnClosePrivacyPolicy = document.querySelector('.popup-privacy-policy__but
 const popupThanks = document.querySelector('.popup-thanks');
 const btnClosePopupThanks = document.querySelector('.popup-thanks__button-close');
 
+inputMask.mask(tel);
 
 menuBtn.addEventListener('click', (event) => {
     body.classList.toggle('body_lock');

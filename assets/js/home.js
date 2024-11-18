@@ -23,6 +23,7 @@ buttonToTop.addEventListener('click', (event) => {
 benefitsArrows.forEach((arrow) => {
     arrow.addEventListener('click', (event) => {
         const arrowId = event.target.dataset.arrow;
+        
         event.target.classList.toggle('benefits__arrow_active');
         document.getElementById(arrowId).classList.toggle("benefits__item-description_active");
     })
