@@ -27,11 +27,11 @@
     display: none;
 }
 
-.logo-for-menu_active {
+.logo-for-menu_white {
     display: block;
 }
 
-.tel__image-for-menu_active {
+.tel__image-for-menu_white {
     display: block;
 }
 
@@ -40,7 +40,7 @@
     transition: all 0.5s;
 }
 
-.tel__number_active {
+.tel__number_white {
     color: #FFFFFF;
 }
 
@@ -50,7 +50,7 @@
 
 }
 
-.menu-button__line_active {
+.menu-button__line_white {
     border: 2px solid #FFFFFF;
 }
 
@@ -125,6 +125,7 @@
     color: #777777;
 
 }
+
 .form__attachfile {
     margin-top: 44px;
     display: flex;
@@ -132,7 +133,6 @@
     gap: 10px;
     align-items: center;
 }
-
 
 .form__attachfile-text {
     font-size: 16px;

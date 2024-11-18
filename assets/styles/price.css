@@ -27,11 +27,11 @@
     display: none;
 }
 
-.logo-for-menu_active {
+.logo-for-menu_white {
     display: block;
 }
 
-.tel__image-for-menu_active {
+.tel__image-for-menu_white {
     display: block;
 }
 
@@ -40,17 +40,15 @@
     transition: all 0.5s;
 }
 
-.tel__number_active {
+.tel__number_white {
     color: #FFFFFF;
 }
 
 .menu-button__line {
     border: 2px solid #393246;
-    transition: all 0.5s;
-
 }
 
-.menu-button__line_active {
+.menu-button__line_white {
     border: 2px solid #FFFFFF;
 }
 

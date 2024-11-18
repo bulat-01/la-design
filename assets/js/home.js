@@ -28,8 +28,9 @@ buttonToTop.addEventListener('click', (event) => {
 
 benefitsArrows.forEach((arrow) => {
     arrow.addEventListener('click', (event) => {
-        event.target.classList.toggle('benefits__arrow_active');
         const arrowId = event.target.dataset.arrow;
+        
+        event.target.classList.toggle('benefits__arrow_active');
         document.getElementById(arrowId).classList.toggle("benefits__item-description_active");
     })
 })
@@ -44,7 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
 tabsButtons.forEach((tabButton) => {
   tabButton.addEventListener('click', (event) => {
     const tabButtonActive = document.querySelector('.active');
-    
+    const tabContentActive = document.getElementById(tabButton.dataset.tab);
+    const line = document.querySelector('.tabs__black-line');
+
     if (tabButtonActive) {
       tabButtonActive.classList.remove('active');
     }
@@ -59,8 +62,6 @@ tabsButtons.forEach((tabButton) => {
     
     tabContentActive.classList.add('active');
 
-    const line = document.querySelector('.tabs__black-line');
-    
     line.style.width = event.currentTarget.offsetWidth - event.currentTarget.children[0].offsetWidth - 5  + 'px';
     line.style.left = event.currentTarget.offsetLeft + 'px'; 
   })
