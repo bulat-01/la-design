@@ -60,7 +60,8 @@ btnClosePrivacyPolicy.addEventListener('click', (event) => {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (validateInputs() == 2) {
+
+    if (validateInputs()) {
         popupThanks.classList.add('active');
     }
 })
@@ -86,25 +87,15 @@ function setSuccess(element) {
 function validateInputs() {
     const userNameValue = userName.value;
     const telValue = tel.value.replace(/\D/g, '');
-    let flag = 0;
+    let flag = false;
 
-    if (userNameValue === '') {
-        setError(userName, 'Требуется ввести имя пользователя');
-    } else if (userNameValue.length < 3) {
-        setError(userName, 'Требуется ввести имя пользователя не меньше 3 символов');
-    } else if (userNameValue.length > 30) {
-        setError(userName, 'Требуется ввести имя пользователя не больше 30 символов');
-    } else {
-        setSuccess(userName);
-        flag++;
-    }
+    flag = userNameValue === '' || userNameValue.length < 3 || userNameValue.length > 30 
+        ? (setError(userName, 'Имя пользователя должно содержать от 3 до 30 символов'), false) 
+        : (setSuccess(userName), true);
 
-    if (telValue.length < 11) {
-        setError(tel, 'Пожалуйста, проверьте номер телефона и попробуйте снова');
-    } else {
-        setSuccess(tel);
-        flag++;
-    }
+    flag = telValue.length < 11 
+        ? (setError(tel, 'Пожалуйста, проверьте номер телефона и попробуйте снова'), false) 
+        : (setSuccess(tel), true);
 
     return flag;
 }
