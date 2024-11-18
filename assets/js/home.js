@@ -52,8 +52,6 @@ tabsButtons.forEach((tabButton) => {
       tabButtonActive.classList.remove('active');
     }
     
-    const tabContentActive = document.getElementById(tabButton.dataset.tab);
-
     if (tabContentActive.classList.contains('list__all-works')) {
       btnShowMore.style.display = 'flex';
     } else {
