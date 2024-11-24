@@ -1,4 +1,4 @@
-if (window.location.pathname === '/pages/portfolio.html' || window.location.pathname === '/pages/contacts.html' || window.location.pathname === '/pages/contacts.html') {
+if (window.location.pathname === '/pages/portfolio.html' || window.location.pathname === '/pages/contacts.html' || window.location.pathname === '/pages/price.html') {
     const logoIcon = document.querySelector('.logo');
     const logoIconForMenu = document.querySelector('.logo-for-menu');
     const telNumberIcon = document.querySelector('.tel__image');
