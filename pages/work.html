@@ -9,12 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/swiper-bundle.css"/>
     <link rel="stylesheet" href="../assets/styles/reset.css">
     <link rel="stylesheet" href="../assets/styles/main.css">
     <link rel="stylesheet" href="../assets/styles/work.css">
     <script defer src="../assets/js/inputmask.min.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/popup.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="../assets/js/work.js"></script>
 </head>
 <body class="body">
     <div class="menu">
@@ -116,17 +119,35 @@
                         </div>
                     </div>
                 </section>
-    
-                <section class="slider">
-                    <div class="slider__img">
-                        <img src="../assets/images/work_page_images/slider_img/picture_slider.jpg" alt="">
-                    </div>
-    
-                    <div class="slider__line">
-                        <div class="slider__black-line">
-    
+          
+                <section class="swiper slider">
+                    <div class="swiper-wrapper slider__wrapper">
+                        <div id="slider__slide" class="swiper-slide slider__slide">
+                            <img src="../assets/images/work_page_images/slider_img/picture-for-slider1.jpg" alt="">
+                        </div>
+
+                        <div id="slider__slide" class="swiper-slide slider__slide">
+                            <img src="../assets/images/work_page_images/slider_img/picture-for-slider2.jpg" alt="">
+                        </div>
+
+                        <div id="slider__slide" class="swiper-slide slider__slide">
+                            <img src="../assets/images/work_page_images/slider_img/picture-for-slider3.jpg" alt="">
+                        </div>
+
+                        <div id="slider__slide" class="swiper-slide slider__slide">
+                            <img src="../assets/images/work_page_images/slider_img/picture-for-slider4.jpg" alt="">
                         </div>
                     </div>
+
+                    <div class="swiper-button-prev slider__button-prev">
+                        <img src="../assets/images/icon-arrow/arrow-left.svg" alt="">
+                    </div>
+
+                    <div class="swiper-button-next slider__button-next">
+                       <img src="../assets/images/icon-arrow/arrow-right.svg" alt="">
+                    </div>
+
+                    <div class="swiper-scrollbar slider__scrollbar"></div>
                 </section>
     
                 <section class="efficiency">
@@ -184,58 +205,63 @@
                             </div>
                         </div>
 
-                        <div class="project-specifics__gallery">
-                            <div class="project-specifics__gallery-row">
-                                <div class="project-specifics__img">
+                        <div class="swiper project-specifics__gallery">
+                            <div class="swiper-wrapper project-specifics__wrapper">
+                                <div class="swiper-slide project-specifics__slide">
                                     <img src="../assets/images/work_page_images/project-specifics_images/img1.png" alt="">
                                 </div>
 
-                                <div class="project-specifics__img">
+                                <div class="swiper-slide project-specifics__slide">
                                     <img src="../assets/images/work_page_images/project-specifics_images/img2.png" alt="">
                                 </div>     
-                            </div>
 
-                            <div class="project-specifics__gallery-row">
-                                <div class="project-specifics__img">
+                                <div class="swiper-slide project-specifics__slide">
                                     <img src="../assets/images/work_page_images/project-specifics_images/img3.png" alt="">
                                 </div>
 
-                                <div class="project-specifics__img">
+                                <div class="swiper-slide project-specifics__slide">
                                     <img src="../assets/images/work_page_images/project-specifics_images/img4.png" alt="">
                                 </div>
                             </div>
                         </div>
                 </section>
 
-                <section class="similar-projects">
+                 <section class="similar-projects">
                     <div class="similar-projects__title title">
                         <h2>похожие проекты</h2>
                     </div>
 
-                    <div class="similar-projects__images">
-                        <div class="similar-projects__img">
-                            <img src="../assets/images/work_page_images/similar_projects_images/img1.png" alt="">
-                        </div>
-
-                        <div class="similar-projects__img">
-                            <img src="../assets/images/work_page_images/similar_projects_images/img2.png" alt="">
-                        </div>
-
-                        <div class="similar-projects__img">
-                            <img src="../assets/images/work_page_images/similar_projects_images/img3.png" alt="">
-                        </div>
-
-                        <div class="similar-projects__img">
-                            <img src="../assets/images/work_page_images/similar_projects_images/img4.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="similar-projects__line">
-                        <div class="similar-projects__black-line">
+                    <div class="swiper similar-projects__swiper">
+                        <div class="swiper-wrapper similar-projects__wrapper">
+                            <div  class="swiper-slide similar-projects__slide">
+                                <img src="../assets/images/work_page_images/similar_projects_images/img1.png" alt="">
+                            </div>
     
+                            <div  class="swiper-slide similar-projects__slide">
+                                <img src="../assets/images/work_page_images/similar_projects_images/img2.png" alt="">
+                            </div>
+    
+                            <div class="swiper-slide similar-projects__slide">
+                                <img src="../assets/images/work_page_images/similar_projects_images/img3.png" alt="">
+                            </div>
+    
+                            <div class="swiper-slide similar-projects__slide">
+                                <img src="../assets/images/work_page_images/similar_projects_images/img4.png" alt="">
+    
+                            </div>
                         </div>
+    
+                        <div class="swiper-button-prev similar-projects__button-prev">
+                            <img src="../assets/images/icon-arrow/arrow-left.svg" alt="">
+                        </div>
+    
+                        <div class="swiper-button-next similar-projects__button-next">
+                            <img src="../assets/images/icon-arrow/arrow-right.svg" alt="">
+                        </div>
+    
+                        <div class="swiper-scrollbar similar-projects__scrollbar"></div>
                     </div>
-                </section>
+                </section> 
 
                 <button class="application-button">
                     <span class="application-text h2">оставить заявку на проект</span>

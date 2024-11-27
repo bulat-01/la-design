@@ -9,11 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/swiper-bundle.css"/>
     <link rel="stylesheet" href="../assets/styles/reset.css">
     <link rel="stylesheet" href="../assets/styles/main.css">
     <link rel="stylesheet" href="../assets/styles/price.css">
     <script defer src="../assets/js/inputmask.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="../assets/js/main.js"></script>
+    <script defer src="../assets/js/price.js"></script>
     <script defer src="../assets/js/burger-menu-color-change.js"></script>
     <script defer src="../assets/js/popup.js"></script>
 </head>
@@ -190,35 +193,42 @@
                 </div>
             </section>
 
+
             <section class="completed-projects">
                 <div class="completed-projects__title title">
                     <h2>реализованные проекты</h2>
                 </div>
 
-                <div class="completed-projects__images">
-                    <div class="completed-projects__img">
-                        <img src="../assets/images/work_page_images/completed-projects_images/image1.png" alt="">
+                <div class="swiper completed-projects__swiper">
+                    <div class="swiper-wrapper completed-projects__wrapper">
+                        <div  class="swiper-slide completed-projects__slide">
+                            <img src="../assets/images/work_page_images/completed-projects_images/image1.png" alt="">
+                        </div>
+
+                        <div  class="swiper-slide completed-projects__slide">
+                            <img src="../assets/images/work_page_images/completed-projects_images/image2.png" alt="">
+                        </div>
+
+                        <div class="swiper-slide completed-projects__slide">
+                            <img src="../assets/images/work_page_images/completed-projects_images/image3.png" alt="">
+                        </div>
+
+                        <div class="swiper-slide completed-projects__slide">
+                            <img src="../assets/images/work_page_images/completed-projects_images/image4.png" alt="">
+                        </div>
                     </div>
 
-                    <div class="completed-projects__img">
-                        <img src="../assets/images/work_page_images/completed-projects_images/image2.png" alt="">
+                    <div class="swiper-button-prev completed-projects__button-prev">
+                        <img src="../assets/images/icon-arrow/arrow-left.svg" alt="">
                     </div>
 
-                    <div class="completed-projects__img">
-                        <img src="../assets/images/work_page_images/completed-projects_images/image3.png" alt="">
+                    <div class="swiper-button-next completed-projects__button-next">
+                        <img src="../assets/images/icon-arrow/arrow-right.svg" alt="">
                     </div>
 
-                    <div class="completed-projects__img">
-                        <img src="../assets/images/work_page_images/completed-projects_images/image4.png" alt="">
-                    </div>
+                    <div class="swiper-scrollbar completed-projects__scrollbar"></div>
                 </div>
-
-                <div class="completed-projects__line">
-                    <div class="completed-projects__black-line">
-
-                    </div>
-                </div>
-            </section>
+            </section> 
 
             <button class="application-button">
                 <span class="application-text h2">оставить заявку на проект</span>
