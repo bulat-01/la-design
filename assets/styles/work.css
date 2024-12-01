@@ -81,6 +81,21 @@
     line-height:135%;
 }
 
+.button-to-top {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    position: fixed;
+    top: 836px;
+    right: 45px;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D5D5D5;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
 .main {
     margin-top: 150px;
 }
@@ -417,6 +432,10 @@
 }
 
 @media (max-width:990px) {
+    .button-to-top {
+        right: 15px;
+    }
+
     .main {
         margin-top: 70px;
     }

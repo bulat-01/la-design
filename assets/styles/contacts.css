@@ -3,6 +3,10 @@
     font-family: "Roboto Condensed", sans-serif;
 }
 
+.body_lock {
+    overflow: hidden;
+}
+
 .header {
     border-bottom: 1px solid #D5D5D5;
 }
@@ -127,6 +131,20 @@
    margin-bottom: 5px;
 }
 
+.form__line.success input {
+    border-color: #09c372;
+}
+
+.form__line.error input {
+    border-color: #ff3860;
+}
+
+.form__line-error {
+    font-size: 12px;
+    color: #ff3860;
+    margin-top: 5px;
+}
+
 .form__line input {
     width: 100%;
     height: 30px;
@@ -145,21 +163,6 @@
 
 }
 
-.form__attachfile {
-    margin-top: 44px;
-    display: flex;
-    cursor: pointer;
-    gap: 10px;
-    align-items: center;
-}
-
-.form__attachfile-text {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-    color: #777777;
-}
-
 .form__consent  {
     margin-top: 30px;
     display: flex;
@@ -171,6 +174,10 @@
     width: 228px;
     height: 60px;
     background-color: #393246; 
+}
+
+.form__consent-button:hover {
+    background-color: #4A415A;
 }
 
 .button__body {
@@ -235,6 +242,94 @@
     width: 100%;
 }
 
+.popup-privacy-policy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000099;
+    padding: 0 45px;
+}
+
+.popup-privacy-policy {
+    display: none;
+}
+
+.popup-privacy-policy.active {
+    display: flex;
+}
+
+.popup-privacy-policy__content {
+    max-width: 1500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.popup-privacy-policy__button-close {
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 30px;
+    top: -35px;
+    right: 0px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.popup-privacy-policy__button-close:hover {
+    opacity: 1;
+}
+
+.popup-privacy-policy__line {
+    border: 2px solid #FFFFFF;
+    width: 30px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+
+.popup-privacy-policy__line:nth-child(1) {
+    position: absolute;
+    bottom: 14px;
+    transform: rotate(-45deg);
+}
+
+.popup-privacy-policy__line:nth-child(2) {
+    position: absolute;
+    bottom: 14px;
+    transform: rotate(45deg);
+}
+
+.popup-privacy-policy__info {
+    overflow: auto;
+    padding: 45px;
+}
+.popup-privacy-policy__title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #3D3D3D;
+}
+
+.popup-privacy-policy__text {
+    font-size: 18px;
+    color: #3D3D3D;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+
 footer {
     margin-top: 130px;
 }
@@ -242,6 +337,12 @@ footer {
 @media(max-width:1080px) {
     .contacts__content {
         gap: 127px;
+    }
+}
+
+@media (max-width:1000px) {
+    .popup-privacy-policy__text {
+        margin-top: 40px;
     }
 }
 
@@ -303,9 +404,39 @@ footer {
     }
 }
 
+
+@media (max-width:650px) {
+    .popup-privacy-policy {
+        padding: 15px;
+    }
+}
+
 @media(max-width:603px) {
     .main {
         padding: 15px
+    }
+}
+
+@media (max-width:586px) {
+    .popup-forma, .popup-thanks {
+        padding: 0 12px;
+    }
+
+    .popup-privacy-policy__info  {
+        padding: 30px 15px; 
+    }
+
+    .popup-privacy-policy__title {
+        font-size: 20px;
+    }
+
+    .popup-privacy-policy__text {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .popup-thanks__content {
+        padding: 40px 0;
     }
 }
 
@@ -349,11 +480,6 @@ footer {
         margin-bottom: 30px;
     }
 
-    .form__attachfile {
-        margin-top: 30px;
-        gap: 20px;
-    }
-
     .form__consent {
         margin-top: 20px;
         gap: 20px;
@@ -366,4 +492,14 @@ footer {
    .contacts__right-column {
     display: block;
    }
+}
+
+@media (max-width: 380px) {
+    .popup-privacy-policy__title {
+        font-size: 18px;
+    }
+
+    .popup-privacy-policy__text {
+        margin-top: 15px;
+    }
 }
