@@ -273,6 +273,11 @@
     top: -35px;
     right: 0;
     cursor: pointer;
+    opacity: 0.6;
+}
+
+.popup-forma__button-close:hover {
+    opacity: 1;
 }
 
 .popup-forma__line {
@@ -324,7 +329,6 @@
     border-bottom: 1px solid #3D3D3D;
 }
 
-
 .input-control.success input {
     border-color: #09c372;
 }
@@ -357,6 +361,10 @@
     background-color: #393246; 
 }
 
+.popup-form__consent-button:hover {
+    background-color: #4A415A;
+}
+
 .button__body {
     width: 100%;
     display: flex;
@@ -384,6 +392,10 @@
 .popup-form__consent-text span {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.popup-form__consent-text span:hover {
+    color: #000000;
 }
 
 .popup-privacy-policy {
@@ -429,6 +441,11 @@
     top: -35px;
     right: 0px;
     cursor: pointer;
+    opacity: 0.6;
+}
+
+.popup-privacy-policy__button-close:hover {
+    opacity: 1;
 }
 
 .popup-privacy-policy__line {
@@ -502,6 +519,11 @@
     top: -35px;
     right: 0;
     cursor: pointer;
+    opacity: 0.6;
+}
+
+.popup-thanks__button-close:hover {
+    opacity: 1;
 }
 
 .popup-thanks__line {
