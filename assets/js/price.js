@@ -1,7 +1,7 @@
 const completedProjectsSwiper = new Swiper('.completed-projects__swiper', {
-
     spaceBetween: 30,
     slidesPerView: 3,
+    loop: true,
 
     scrollbar: {
         el: '.swiper-scrollbar',

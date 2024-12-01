@@ -277,12 +277,23 @@
     margin: 40px auto 0 auto;
 }
 
-.application-button, footer {
-    margin-top: 130px;
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  bottom: var(--swiper-scrollbar-bottom, 4px);
+  bottom: 0px;
+  z-index: 50;
+  height: 3px;
+  max-width: 483px;
+  width: 100%;
 }
 
 .similar-projects__wrapper {
     width: fit-content;;
+}
+
+.application-button, footer {
+    margin-top: 130px;
 }
 
 .application-button, footer {
