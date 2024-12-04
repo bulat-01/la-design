@@ -255,34 +255,55 @@
     margin-bottom: 50px;
 }
 
-.completed-projects__images {
-    display: flex;
-    gap: 30px;
+.completed-projects__button-prev {
+    display: block;
+    margin-left: 30px;
 }
 
-.completed-projects__img img{
-    max-width: 100%;
-    width: 100%;
-}
-
-.completed-projects__line {
-    position: relative;
-    max-width: 483px;
-    margin: 40px auto 0 auto;
-    border-bottom: 1px solid #D5D5D5;
+.completed-projects__button-prev::after {
     display: none;
 }
 
-.completed-projects__black-line {
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 94px;
-    border-bottom: 3px solid #000000;
+.completed-projects__button-next {
+     display: block;
+    margin-right: 30px;
+}
+  
+.completed-projects__button-next::after {
+    display: none;
+}
+
+.completed-projects__scrollbar {
+    margin: 40px auto 0 auto;
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  bottom: var(--swiper-scrollbar-bottom, 4px);
+  bottom: 0px;
+  z-index: 50;
+  height: 3px;
+  max-width: 483px;
+  width: 100%;
+}
+
+.similar-projects__wrapper {
+    width: fit-content;;
 }
 
 .application-button, footer {
     margin-top: 130px;
+}
+
+.application-button, footer {
+    margin-top: 130px;
+}
+
+@media (max-width: 1240px) {
+    .completed-projects__slide img {
+        width: 100%;
+    }
 }
 
 @media (max-width:1056px) {
@@ -308,7 +329,18 @@
     }
 }
 
-@media (max-width:1000px) {  
+@media (max-width: 1024px) {
+    .completed-projects__slide img {
+        width: 290px;
+        height: 270px;
+    }
+
+    .completed-projects__scrollbar {
+        display: block;
+    }
+}
+
+@media (max-width: 1000px) {  
     .price-title {
         margin-top: 70px;
     }
@@ -377,8 +409,13 @@
         display: none;
     }
 
-    .completed-projects__title {
-        margin-bottom: 30px;
+    .completed-projects__slide img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .completed-projects__scrollbar {
+        margin-top: 30px;
     }
 
     .application-button, footer {
@@ -386,29 +423,32 @@
     }
 }
 
-@media (max-width:848px) {
+@media (max-width: 768px) {
     .completed-projects {
         margin-top: 70px;
     }
-
-    .completed-projects__line {
-        margin-top: 30px;
+    
+    .completed-projects__title {
+        margin-bottom: 30px;
     }
 
-    .completed-projects__img:nth-child(3) {
+    .completed-projects__button-prev, .completed-projects__button-next {
         display: none;
-     }
+    }
 
-     .completed-projects__img img {
-        width: 350px ;
+    .completed-projects__slide img {
         height: 324px;
-     }
+    }
 }
 
 @media (max-width:740px) {
    .main {
       padding: 0 15px;
    }
+
+   .completed-projects__slide img {
+        height: 100%;
+    }
 }
 
 @media (max-width:650px) {
@@ -418,13 +458,9 @@
      }
 }
 
-@media (max-width:580px) {
-    .completed-projects__images  {
-        gap: 15px;
-    }
-
-    .completed-projects__line {
-        max-width: 350px;
+@media (max-width: 560px) {
+    .completed-projects__scrollbar.swiper-scrollbar-horizontal {
+        max-width: 250px;
     }
 }
 
@@ -441,13 +477,14 @@
         margin-bottom: 29px;
     }
 
-    .completed-projects__img img {
-        height: 200px;
+    .completed-projects__scrollbar.swiper-scrollbar-horizontal {
+        max-width: 216px;
     }
 
     .application-button, footer {
         margin-top: 70px;
     }
+
 }
 
 @media (max-width:450px) {
@@ -458,8 +495,12 @@
 }
 
 @media (max-width:430px) {
-    .completed-projects__line {
-        max-width: 216px;
+    .completed-projects {
+        margin-top: 70px;
+    }
+    
+    .completed-projects__title {
+        margin-bottom: 29px;
     }
 }
 
@@ -467,13 +508,10 @@
     .why-design-project__item-title {
         font-size: 16px;
     }
+}
 
-    .completed-projects__img:nth-child(2) {
-        display: none;
-    }
-
-    .completed-projects__img img {
-        width: 380px;
+@media (max-width: 320px) {
+    .completed-projects__slide img {
         height: 290px;
     }
 }
