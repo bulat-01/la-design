@@ -77,6 +77,21 @@
     border: 2px solid #FFFFFF;
 }
 
+.button-to-top {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    position: fixed;
+    top: 836px;
+    right: 45px;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D5D5D5;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
 .main {
     padding: 0 82px 0 47px;
 }
@@ -341,6 +356,10 @@ footer {
 }
 
 @media (max-width:1000px) {
+    .button-to-top {
+        right: 15px;
+    }
+    
     .popup-privacy-policy__text {
         margin-top: 40px;
     }

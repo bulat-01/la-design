@@ -4,7 +4,7 @@ const header = document.querySelector('.header');
 const menuBtn = document.querySelector('.menu-button');
 const menuBtnLines = document.querySelectorAll('.menu-button__line');
 const telNumber = document.querySelector('.tel__number');
-
+const buttonToTop = document.querySelector('.button-to-top');
 
 menuBtn.addEventListener('click', (event) => {
     body.classList.toggle('body_lock');
@@ -26,3 +26,10 @@ menu.addEventListener('click', (event) => {
         line.style.transition = 'none';
     });
 });
+
+buttonToTop.addEventListener('click', (event) => {
+    header.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+})

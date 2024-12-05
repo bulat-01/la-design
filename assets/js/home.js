@@ -1,6 +1,4 @@
-const headerElem = document.querySelector('.header');
 const arrowDown = document.querySelector('.arrow-bottom__img');
-const buttonToTop = document.querySelector('.button-to-top');
 const targetBlock = document.querySelector('.portfolio');
 const benefitsArrows = document.querySelectorAll('.benefits__arrow');
 const benefitsItemDescription = document.querySelectorAll('.benefits__item-description');
@@ -9,13 +7,6 @@ arrowDown.addEventListener('click', (event) => {
     targetBlock.scrollIntoView({
         behavior: "smooth",
         block: "start",
-      });
-})
-
-buttonToTop.addEventListener('click', (event) => {
-  headerElem.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
       });
 })
 

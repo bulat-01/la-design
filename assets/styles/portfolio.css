@@ -73,6 +73,21 @@
     border: 2px solid #FFFFFF;
 }
 
+.button-to-top {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    position: fixed;
+    top: 836px;
+    right: 45px;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D5D5D5;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
 .main {
     margin-top: 100px;
     padding: 0 45px;
@@ -302,10 +317,13 @@
 }
 
 @media (max-width:1000px) {
+    .button-to-top {
+        right: 15px;
+    }
+    
     .main {
         margin-top: 70px;
     }
-    
 
     .portfolio__tabs {
         margin: 70px auto 30px auto;
