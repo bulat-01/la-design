@@ -1,3 +1,4 @@
+const body = document.querySelector('.body');
 const buttonToTop = document.querySelector('.button-to-top');
 const imagesGallery = document.querySelectorAll('.project-specifics__img');
 const popupGallery = document.querySelector('.popup-gallery');
