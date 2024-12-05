@@ -143,6 +143,7 @@
     position: relative;
     max-width: 380px;
     width: 100%;
+    height: fit-content;
     border: 1px solid #D5D5D5;
 }
 
