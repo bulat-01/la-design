@@ -1,6 +1,14 @@
+const buttonToTop = document.querySelector('.button-to-top');
 const imagesGallery = document.querySelectorAll('.project-specifics__img');
 const popupGallery = document.querySelector('.popup-gallery');
 const bntClosePopupGallery = document.querySelector('.popup-gallery__button-close');
+
+buttonToTop.addEventListener('click', (event) => {
+    header.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+})
 
 const sliderSwiper = new Swiper('.slider', {
     spaceBetween: 30,
